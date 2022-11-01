@@ -6,22 +6,28 @@ using UnityEngine;
 public abstract class Shape : MonoBehaviour
 {
     [SerializeField] protected TextMeshProUGUI displayText;
+    protected string ShapeName { get; set; }
+
+    protected string ShapeColor { get; set; }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        ShapeName = $"{this.gameObject.name}";
+        ShapeColor = $"{GetComponent<Renderer>().materials[0].name}";
+        ShapeColor = ShapeColor.Remove(ShapeColor.IndexOf(' '));
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        SpinShape();
     }
+
+    public abstract void SpinShape();
 
     protected void OnMouseDown()
     {
-        DisplayText();
+        displayText.text = $"This is a {ShapeColor} {ShapeName}";
     }
 
-    public abstract void DisplayText();
 }

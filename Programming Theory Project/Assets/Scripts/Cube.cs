@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Cube : Shape
 {
-    public override void DisplayText()
+
+    public override void SpinShape()
     {
-        displayText.text = "This is a Cube";
+        transform.Rotate(new Vector3(0.25f, 0.25f, 0.25f));
     }
 }

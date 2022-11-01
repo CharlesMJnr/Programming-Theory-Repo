@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Cylinder : Shape
 {
-    public override void DisplayText()
+
+    public override void SpinShape()
     {
-        displayText.text = "This is a Cylinder";
+        transform.Rotate(new Vector3(0.5f, 0.5f, 0.5f));
     }
 }

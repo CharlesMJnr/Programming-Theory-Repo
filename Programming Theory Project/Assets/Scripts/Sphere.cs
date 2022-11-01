@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Sphere : Shape
 {
-    public override void DisplayText()
+    public override void SpinShape()
     {
-        displayText.text = "This is a Sphere";
+        transform.Rotate(new Vector3(1, 1, 1));
     }
+
 }
