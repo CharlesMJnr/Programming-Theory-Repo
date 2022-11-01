@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Cylinder : Shape
 {
-
+    public override void DisplayText()
+    {
+        displayText.text = "This is a Cylinder";
+    }
 }

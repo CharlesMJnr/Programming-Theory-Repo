@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Cube : Shape
 {
-
+    public override void DisplayText()
+    {
+        displayText.text = "This is a Cube";
+    }
 }

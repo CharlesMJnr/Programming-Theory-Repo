@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class Shape : MonoBehaviour
+public abstract class Shape : MonoBehaviour
 {
+    [SerializeField] protected TextMeshProUGUI displayText;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,11 @@ public class Shape : MonoBehaviour
     {
         
     }
+
+    protected void OnMouseDown()
+    {
+        DisplayText();
+    }
+
+    public abstract void DisplayText();
 }
