@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class Shape : MonoBehaviour
 {
     [SerializeField] protected TextMeshProUGUI displayText;
-    protected string ShapeName { get; set; }
+    protected string ShapeName { get; set; }//ENCAPSULATION
 
     protected string ShapeColor { get; set; }
 
@@ -25,7 +25,7 @@ public abstract class Shape : MonoBehaviour
 
     public abstract void SpinShape();
 
-    protected void OnMouseDown()
+    protected void OnMouseDown()//ABSTRACTION
     {
         displayText.text = $"This is a {ShapeColor} {ShapeName}";
     }
